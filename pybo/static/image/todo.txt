@@ -1,0 +1,2 @@
+1. 이미지 복사해넣는다
+2. <img>  활용해서 aboutme.html 안에 원하는 이미지(path = src="/static/image/???"

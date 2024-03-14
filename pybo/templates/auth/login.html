@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div id="sign-in-box">
+    <h5 class="my-3 border-bottom pb-2">Login</h5>
+    <form method="post">
+        {{ form.csrf_token }}
+        {% include "form_errors.html" %}
+        <div class="mb-3">
+            <label for="username">Username</label>
+            <input type="text" class="form-control" name="username" id="username"
+                   value="{{ form.username.data or '' }}">
+        </div>
+        <div class="mb-3">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" name="password" id="password"
+                   value="{{ form.password.data or '' }}">
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+</div>
+
+{% endblock %}

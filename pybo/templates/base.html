@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <style>
+        div {
+        text-align: center;
+        vertical-align: middle;
+        }
+    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+    <!-- pybo CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <!-- google login CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>Hello, pybo!</title>
+</head>
+<body>
+{% include "navbar.html" %}
+<!-- 기본 템플릿 안에 삽입될 내용 Start -->
+{% block content %}
+{% endblock %}
+<!-- 기본 템플릿 안에 삽입될 내용 End -->
+<script src="{{ url_for('static', filename='bootstrap.min.js') }}"></script>
+
+{% block script %}
+{% endblock %}
+
+</body>
+</html>
