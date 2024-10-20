@@ -19,7 +19,7 @@ migrate = Migrate()
 def create_app():
     app = Flask(__name__)
     app.config.from_object(config)
-    app.config['UPLOAD_FOLDER'] = '..\\static\\upload'
+    app.config['UPLOAD_FOLDER'] = '../static/upload'
 
     db.init_app(app)
     if app.config['SQLALCHEMY_DATABASE_URI'].startswith("sqlite"):
